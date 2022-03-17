@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Header from './Header'
 function Layout({ children }) {
   return (
     <div>
-      <header>Header</header>
+      <Header />
       <main>{children}</main>
       <footer>footer</footer>
     </div>
