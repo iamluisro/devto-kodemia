@@ -13,20 +13,20 @@ function NavBar() {
       <Container fluid className='justify-content-between'>
         <div className='d-flex'>
           <Navbar.Brand href='#'>Devto</Navbar.Brand>
-            <InputGroup className='mb-3'>
-              <FormControl
-                placeholder='Search...'
-                aria-label='Search'
-                aria-describedby='basic-addon1'
-              />
-              <InputGroup.Text
-                id='basic-addon1'
-                style={{ cursor: 'pointer' }}
-                onClick={() => alert('hello')}
-              >
-                <i class='bi bi-search'></i>
-              </InputGroup.Text>
-            </InputGroup>
+          <InputGroup className='mb-3'>
+            <FormControl
+              placeholder='Search...'
+              aria-label='Search'
+              aria-describedby='basic-addon1'
+            />
+            <InputGroup.Text
+              id='basic-addon1'
+              style={{ cursor: 'pointer' }}
+              onClick={() => alert('hello')}
+            >
+              <i class='bi bi-search'></i>
+            </InputGroup.Text>
+          </InputGroup>
         </div>
         <div>
           <Navbar.Toggle aria-controls='navbarScroll' />
@@ -36,7 +36,9 @@ function NavBar() {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Button variant='outline-primary' className='me-2'>Sign In</Button>
+              <Button variant='outline-primary' className='me-2'>
+                Sign In
+              </Button>
               <Button variant='outline-primary'>Create Account</Button>
             </Nav>
           </Navbar.Collapse>
@@ -50,8 +52,10 @@ function Layout({ children }) {
   return (
     <div className='Layout-container'>
       <NavBar>Header</NavBar>
-      <main>{children}</main>
-      <footer>footer</footer>
+      <Container>
+        <main>{children}</main>
+      </Container>
+      <footer className='d-flex border border-1 justify-content-center' style={{ height: '250px'}}>footer</footer>
     </div>
   );
 }
