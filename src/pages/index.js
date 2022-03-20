@@ -1,8 +1,8 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import Layout from '../components/Layout/Layout';
-import Posts from '../components/Posts';
+import Layout from '../components/layout';
+import Posts from '../components/posts';
 function Home() {
   const [posts, setPost] = React.useState([]);
 
