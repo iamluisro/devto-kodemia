@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link, Outlet } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import InputGroup from 'react-bootstrap/InputGroup';
 
@@ -12,7 +12,9 @@ function NavBar() {
     <Navbar bg='light' expand='lg'>
       <Container fluid className='justify-content-between'>
         <div className='d-flex'>
-          <Navbar.Brand href='#'>Devto</Navbar.Brand>
+          <Link to='/'>
+            <Navbar.Brand >Devto</Navbar.Brand>
+          </Link>
           <InputGroup className='mb-3'>
             <FormControl
               placeholder='Search...'
@@ -24,7 +26,7 @@ function NavBar() {
               style={{ cursor: 'pointer' }}
               onClick={() => alert('hello')}
             >
-              <i class='bi bi-search'></i>
+              <i className='bi bi-search'></i>
             </InputGroup.Text>
           </InputGroup>
         </div>
@@ -39,7 +41,9 @@ function NavBar() {
               <Button variant='outline-primary' className='me-2'>
                 Sign In
               </Button>
-              <Button variant='outline-primary'>Create Account</Button>
+              <Link to='/create-account'>
+                <Button variant='outline-primary'>Create Account</Button>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </div>
@@ -48,16 +52,23 @@ function NavBar() {
   );
 }
 
-function Layout({ children }) {
+function LayoutWChildren({ children }) {
   return (
     <div className='Layout-container'>
       <NavBar>Header</NavBar>
       <Container>
-        <main>{children}</main>
+        <main>
+          {children}
+        </main>
       </Container>
-      <footer className='d-flex border border-1 justify-content-center' style={{ height: '250px'}}>footer</footer>
+      <footer
+        className='d-flex border border-1 justify-content-center'
+        style={{ height: '250px' }}
+      >
+        footer
+      </footer>
     </div>
   );
 }
 
-export default Layout;
+export default LayoutWChildren;
