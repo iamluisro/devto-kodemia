@@ -2,7 +2,6 @@ import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { Link } from 'react-router-dom';
-import Layout from '../components/layout';
 import Posts from '../components/posts';
 function Home() {
   const [posts, setPost] = React.useState([]);
@@ -23,7 +22,7 @@ function Home() {
         <Col>Left</Col>
         <Col md={6}>
           {posts.map((post) => (
-            <Link to={`/posts/${post._id}`} key={post._id}>
+            <Link key={post._id} to={`/posts/${post._id}`}>
               <Posts  />
             </Link>
           ))}
