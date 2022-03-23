@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Layout from './components/layout';
+// import Layout from './components/Layout';
 import LayoutWChildren from './components/layout-with-children';
 import Home from './pages';
 import WriterPage from './pages/writer-page';
 import CreateAccount from './pages/create-account';
-import PostPage from './pages/post';
+import PostPage from './pages/ost';
 
 function App() {
   return (
