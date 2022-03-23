@@ -5,7 +5,7 @@ function PostPage() {
   const params = useParams();
   console.log("🚀 ~ file: post.js ~ line 6 ~ PostPage ~ params", params)
   const [postData, setPostData] = React.useState({});
-  const { title, image, content } = postData;
+  const { title, content } = postData;
   React.useEffect(() => {
     async function getPost() {
       const post = await fetch(
