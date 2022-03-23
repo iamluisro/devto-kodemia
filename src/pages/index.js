@@ -1,7 +1,7 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import Layout from '../components/layout';
+import { Link } from 'react-router-dom';
 import Posts from '../components/posts';
 function Home() {
   const [posts, setPost] = React.useState([]);
@@ -17,17 +17,19 @@ function Home() {
   }, []);
 
   return (
-    <Layout>
+    <div>
       <Row>
         <Col>Left</Col>
         <Col md={6}>
           {posts.map((post) => (
-            <Posts key={post._id} />
+            <Link key={post._id} to={`/posts/${post._id}`}>
+              <Posts  />
+            </Link>
           ))}
         </Col>
         <Col>Right</Col>
       </Row>
-    </Layout>
+    </div>
   );
 }
 

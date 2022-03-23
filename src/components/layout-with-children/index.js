@@ -52,17 +52,23 @@ function NavBar() {
   );
 }
 
-function Layout() {
+function LayoutWChildren({ children }) {
   return (
     <div className='Layout-container'>
       <NavBar>Header</NavBar>
       <Container>
         <main>
-          <Outlet />
+          {children}
         </main>
       </Container>
+      <footer
+        className='d-flex border border-1 justify-content-center'
+        style={{ height: '250px' }}
+      >
+        footer
+      </footer>
     </div>
   );
 }
 
-export default Layout;
+export default LayoutWChildren;
