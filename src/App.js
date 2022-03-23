@@ -5,7 +5,7 @@ import LayoutWChildren from './components/layout-with-children';
 import Home from './pages';
 import WriterPage from './pages/writer-page';
 import CreateAccount from './pages/create-account';
-import PostPage from './pages/ost';
+import PostPage from './pages/post';
 
 function App() {
   return (
