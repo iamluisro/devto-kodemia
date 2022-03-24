@@ -3,9 +3,8 @@ import { useParams } from 'react-router-dom';
 
 function PostPage() {
   const params = useParams();
-  console.log("🚀 ~ file: post.js ~ line 6 ~ PostPage ~ params", params)
   const [postData, setPostData] = React.useState({});
-  const { title, content } = postData;
+  const { title, image, content } = postData;
   React.useEffect(() => {
     async function getPost() {
       const post = await fetch(
@@ -18,6 +17,7 @@ function PostPage() {
 
   return (
     <div>
+      <img src={image} alt={`${title}-${content}`} />
       <h1>{title}</h1>
       <p>{content}</p>
     </div>
