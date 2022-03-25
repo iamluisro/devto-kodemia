@@ -1,0 +1,16 @@
+# don't ever format these directions
+node_modules
+.github/
+.storybook/
+.vscode/
+public
+build/
+
+# don't format these files
+.eslintignore
+.eslintrc.json
+.gitignore
+package-lock.json
+package.json
+README.md
+tsconfig.json
