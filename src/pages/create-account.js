@@ -27,7 +27,7 @@ function CreateAccount() {
   async function submitForm(e) {
     e.preventDefault();
     try {
-      const resp = await fetch('http://localhost:8080/api/writers/signup', {
+      const resp = await fetch('https://luis-kodemia-devto-api.vercel.app/api/writers/signup', {
         method: 'POST',
         body: JSON.stringify({ ...user, dateCreated: new Date() }),
         headers: {
