@@ -9,7 +9,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 function NavBar() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" >
       <Container fluid className="justify-content-between">
         <div className="d-flex">
           <Link to="/">

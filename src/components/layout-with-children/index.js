@@ -6,10 +6,11 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import FormControl from 'react-bootstrap/FormControl';
 import InputGroup from 'react-bootstrap/InputGroup';
+import './Layout.scss'
 
 function NavBar() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg" variant='light' bg="white">
       <Container fluid className="justify-content-between">
         <div className="d-flex">
           <Link to="/">
@@ -54,8 +55,8 @@ function NavBar() {
 
 function LayoutWChildren({ children }) {
   return (
-    <div className="Layout-container">
-      <NavBar>Header</NavBar>
+    <div className="Layout-container bg-custom">
+      <NavBar />
       <Container>
         <main>{children}</main>
       </Container>

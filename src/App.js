@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 // import Layout from './components/Layout';
 import LayoutWChildren from './components/layout-with-children';
 import Home from './pages';
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           {/* <Route element={<Layout />}> */}
           <Route path="/" element={<Home />} />
-          <Route path="/writers/:writerId" element={<WriterPage />} />
+          <Route path="/writers/:username" element={<WriterPage />} />
           <Route path="/posts" element={<Home />} />
           <Route path="/posts/:postId" element={<PostPage />} />
           <Route path="/create-account" element={<CreateAccount />} />
