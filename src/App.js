@@ -9,17 +9,17 @@ import PostPage from './pages/post';
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <LayoutWChildren>
         <Routes>
           {/* <Route element={<Layout />}> */}
-          <Route path='/' element={<Home />} />
-          <Route path='/writers/:writerId' element={<WriterPage />} />
-          <Route path='/posts' element={<Home />} />
-          <Route path='/posts/:postId' element={<PostPage />} />
-          <Route path='/create-account' element={<CreateAccount />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/writers/:writerId" element={<WriterPage />} />
+          <Route path="/posts" element={<Home />} />
+          <Route path="/posts/:postId" element={<PostPage />} />
+          <Route path="/create-account" element={<CreateAccount />} />
           <Route
-            path='*'
+            path="*"
             element={
               <main style={{ padding: '1rem' }}>
                 <p>There's nothing here!</p>

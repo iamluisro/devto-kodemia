@@ -34,24 +34,24 @@ function Home() {
                 to={`/${username}/${_id}`}
                 style={{ textDecoration: 'none' }}
               >
-                <Card className='m-3'>
-                  <Card.Img variant='top' alt='cover-post' src={img} />
+                <Card className="m-3">
+                  <Card.Img variant="top" alt="cover-post" src={img} />
                   <Card.Body>
-                    <div className='d-flex'>
+                    <div className="d-flex">
                       <img
-                        src='https://ca.slack-edge.com/TCRFJBKB6-U02KCUW0Q3H-3ad9c2dbe014-512'
-                        className='rounded-circle me-2'
+                        src="https://ca.slack-edge.com/TCRFJBKB6-U02KCUW0Q3H-3ad9c2dbe014-512"
+                        className="rounded-circle me-2"
                         style={{ width: '2rem', height: '2rem' }}
-                        alt='Avatar user'
+                        alt="Avatar user"
                       />
-                      <div className='d-flex flex-column align-items-start'>
-                        <p className='m-0'>
+                      <div className="d-flex flex-column align-items-start">
+                        <p className="m-0">
                           {name} {lastName}
                         </p>
-                        <p className='text-muted'>{createdAt}</p>
+                        <p className="text-muted">{createdAt}</p>
                       </div>
                     </div>
-                    <Card.Title className=''>{title}</Card.Title>
+                    <Card.Title className="">{title}</Card.Title>
                   </Card.Body>
                 </Card>
               </Link>

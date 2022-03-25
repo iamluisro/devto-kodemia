@@ -9,40 +9,40 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 function NavBar() {
   return (
-    <Navbar bg='light' expand='lg'>
-      <Container fluid className='justify-content-between'>
-        <div className='d-flex'>
-          <Link to='/'>
-            <Navbar.Brand >Devto</Navbar.Brand>
+    <Navbar bg="light" expand="lg">
+      <Container fluid className="justify-content-between">
+        <div className="d-flex">
+          <Link to="/">
+            <Navbar.Brand>Devto</Navbar.Brand>
           </Link>
-          <InputGroup className='mb-3'>
+          <InputGroup className="mb-3">
             <FormControl
-              placeholder='Search...'
-              aria-label='Search'
-              aria-describedby='basic-addon1'
+              placeholder="Search..."
+              aria-label="Search"
+              aria-describedby="basic-addon1"
             />
             <InputGroup.Text
-              id='basic-addon1'
+              id="basic-addon1"
               style={{ cursor: 'pointer' }}
               onClick={() => alert('hello')}
             >
-              <i className='bi bi-search'></i>
+              <i className="bi bi-search"></i>
             </InputGroup.Text>
           </InputGroup>
         </div>
         <div>
-          <Navbar.Toggle aria-controls='navbarScroll' />
-          <Navbar.Collapse id='navbarScroll'>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
             <Nav
-              className='me-auto my-2 my-lg-0'
+              className="me-auto my-2 my-lg-0"
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Button variant='outline-primary' className='me-2'>
+              <Button variant="outline-primary" className="me-2">
                 Sign In
               </Button>
-              <Link to='/create-account'>
-                <Button variant='outline-primary'>Create Account</Button>
+              <Link to="/create-account">
+                <Button variant="outline-primary">Create Account</Button>
               </Link>
             </Nav>
           </Navbar.Collapse>
@@ -54,7 +54,7 @@ function NavBar() {
 
 function Layout() {
   return (
-    <div className='Layout-container'>
+    <div className="Layout-container">
       <NavBar>Header</NavBar>
       <Container>
         <main>
