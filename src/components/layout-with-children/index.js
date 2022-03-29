@@ -6,11 +6,11 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import FormControl from 'react-bootstrap/FormControl';
 import InputGroup from 'react-bootstrap/InputGroup';
-import './Layout.scss'
+import './Layout.scss';
 
 function NavBar() {
   return (
-    <Navbar expand="lg" variant='light' bg="white">
+    <Navbar expand="lg" variant="light" bg="white">
       <Container fluid className="justify-content-between">
         <div className="d-flex">
           <Link to="/">
@@ -39,9 +39,11 @@ function NavBar() {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Button variant="outline-primary" className="me-2">
-                Sign In
-              </Button>
+              <Link to="/signin">
+                <Button variant="outline-primary" className="me-2">
+                  Sign In
+                </Button>
+              </Link>
               <Link to="/create-account">
                 <Button variant="outline-primary">Create Account</Button>
               </Link>
